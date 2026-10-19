@@ -74,8 +74,10 @@ Workday takes `tenant/wdHost/site` (`nvidia/wd5/NVIDIAExternalCareerSite`). Team
 
 ```sh
 npm version patch        # or minor / major: bumps package.json, commits, tags
-git push --follow-tags   # the release workflow tests, publishes to npm and creates the GitHub release
+git push --follow-tags   # the release workflow tests, stages the release on npm and creates the GitHub release
 ```
+
+The npm version goes live once the maintainer approves it (npmjs.com > ats-jobs > Staged Packages, or `npm stage approve <id>`).
 
 Built for [jobs.whatrunsindia.com](https://jobs.whatrunsindia.com), a job board that tracks thousands of companies.
 
