@@ -1,5 +1,6 @@
 name: release
-# Push a tag like v0.1.3 (see "Releasing" in the README): tests, publishes to npm, creates the GitHub release.
+# Push a tag like v0.1.3 (see "Releasing" in the README): tests, stages the release on npm,
+# creates the GitHub release. The npm version goes live only when the maintainer approves it (2FA).
 on:
   push:
     tags: ['v*']
@@ -15,12 +16,14 @@ jobs:
         with:
           node-version: 22
           registry-url: https://registry.npmjs.org
-      - run: npm install -g npm@latest   # trusted publishing needs npm 11.5.1+
+      - run: npm install -g npm@latest   # `npm stage` needs npm 11.15+
       - run: npm ci
       - run: npm test
       - name: Tag must match package.json
         run: test "v$(node -p "require('./package.json').version")" = "$GITHUB_REF_NAME"
-      - run: npm publish --provenance --access public
+      - run: npm stage publish --provenance --access public
       - run: gh release create "$GITHUB_REF_NAME" --generate-notes --latest
         env:
           GH_TOKEN: ${{ github.token }}
+      - name: Next step
+        run: echo "Staged $GITHUB_REF_NAME. Approve it at npmjs.com > ats-jobs > Staged Packages, or run 'npm stage list ats-jobs' then 'npm stage approve <id>'." >> "$GITHUB_STEP_SUMMARY"
