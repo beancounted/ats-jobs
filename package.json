@@ -1,6 +1,6 @@
 {
   "name": "ats-jobs",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Fetch and normalize public job listings from Ashby, Lever, Greenhouse, Workable, Recruitee, Teamtailor, Pinpoint, SmartRecruiters, Workday and Keka into one shape",
   "main": "index.js",
   "files": [
@@ -36,7 +36,7 @@
   "author": "Rishi Lahoti",
   "license": "MIT",
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   },
   "dependencies": {
     "sanitize-html": "^2.17.1"
