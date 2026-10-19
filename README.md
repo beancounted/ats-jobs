@@ -70,6 +70,13 @@ Workday takes `tenant/wdHost/site` (`nvidia/wd5/NVIDIAExternalCareerSite`). Team
 - Workday, Keka, Teamtailor and Pinpoint use unofficial endpoints that can change without notice.
 - `npm run live` checks every provider against the real APIs.
 
+## Releasing
+
+```sh
+npm version patch        # or minor / major: bumps package.json, commits, tags
+git push --follow-tags   # the release workflow tests, publishes to npm and creates the GitHub release
+```
+
 Built for [jobs.whatrunsindia.com](https://jobs.whatrunsindia.com), a job board that tracks thousands of companies.
 
 MIT
