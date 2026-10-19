@@ -1,15 +1,60 @@
 {
   "name": "ats-jobs",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Fetch and normalize public job listings from Ashby, Lever, Greenhouse, Workable, Recruitee, Teamtailor, Pinpoint, SmartRecruiters, Workday and Keka into one shape",
   "main": "index.js",
-  "files": ["index.js", "lib"],
-  "scripts": { "test": "node --test test/*.test.js", "live": "node test/live.js" },
-  "keywords": ["ats", "jobs", "job-board", "scraper", "ashby", "lever", "greenhouse", "workable", "workday"],
+  "files": [
+    "index.js",
+    "lib"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "live": "node test/live.js"
+  },
+  "keywords": [
+    "ats",
+    "jobs",
+    "job-board",
+    "scraper",
+    "ashby",
+    "lever",
+    "greenhouse",
+    "workable",
+    "workday",
+    "applicant-tracking-system",
+    "job-scraper",
+    "jobs-api",
+    "job-listings",
+    "recruitee",
+    "teamtailor",
+    "pinpoint",
+    "smartrecruiters",
+    "keka",
+    "normalize",
+    "careers"
+  ],
   "author": "Rishi Lahoti",
   "license": "MIT",
-  "engines": { "node": ">=18" },
-  "dependencies": { "sanitize-html": "^2.17.1" },
-  "peerDependencies": { "cities.json": "^1.1.61" },
-  "peerDependenciesMeta": { "cities.json": { "optional": true } }
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "sanitize-html": "^2.17.1"
+  },
+  "peerDependencies": {
+    "cities.json": "^1.1.61"
+  },
+  "peerDependenciesMeta": {
+    "cities.json": {
+      "optional": true
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rishilahoti/ats-jobs.git"
+  },
+  "homepage": "https://github.com/rishilahoti/ats-jobs#readme",
+  "bugs": {
+    "url": "https://github.com/rishilahoti/ats-jobs/issues"
+  }
 }
