@@ -9,7 +9,8 @@
   ],
   "scripts": {
     "test": "node --test test/*.test.js",
-    "live": "node test/live.js"
+    "live": "node test/live.js",
+    "scan": "node scan/scan.js"
   },
   "keywords": [
     "ats",

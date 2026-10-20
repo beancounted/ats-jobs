@@ -1,3 +1,5 @@
 node_modules/
 COVERSATION.md
 CONVERSATION.md
+scan/jobs.csv
+scan/seen.json

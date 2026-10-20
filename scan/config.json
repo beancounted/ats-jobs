@@ -1,0 +1,8 @@
+{
+  "companies": [
+    { "name": "ANZ", "provider": "successfactors", "baseUrl": "https://careers.anz.com", "locationSearch": "New Zealand" }
+  ],
+  "locations": ["New Zealand", "NZ", "Auckland", "Wellington", "Christchurch", "Hamilton", "Tauranga", "Dunedin", "Palmerston North", "Nelson", "Napier", "Hastings", "Queenstown"],
+  "keywords": ["infrastructure", "cloud", "platform engineer", "network engineer", "network engineering", "devops", "site reliability", "SRE", "systems engineer", "AWS", "Azure", "GCP", "kubernetes", "terraform", "linux", "data centre", "data center", "storage", "middleware", "observability"],
+  "matchIn": ["title", "description"]
+}
